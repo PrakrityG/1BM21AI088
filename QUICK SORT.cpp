@@ -11,8 +11,6 @@ int partition(int arr[], int start, int end)
 		if (arr[i] <= pivot)
 			count++;
 	}
-
-
 	int pivotIndex = start + count;
 	swap(arr[pivotIndex], arr[start]);
 
@@ -38,14 +36,13 @@ int partition(int arr[], int start, int end)
 
 void quickSort(int arr[], int start, int end)
 {
-
 	if (start >= end)
 		return;
-
 
 	int p = partition(arr, start, end);
 
 	quickSort(arr, start, p - 1);
+
 
 	quickSort(arr, p + 1, end);
 }
