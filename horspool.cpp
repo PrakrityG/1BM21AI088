@@ -24,6 +24,7 @@ void search( string txt, string pat)
 		if (j < 0)
 		{
 			cout << "pattern occurs at shift = " << s << endl;
+			cout<<"pattern occurs at position ="<<s+1<<endl;
 			s += (s + m < n)? m-badchar[txt[s + m]] : 1;
 		}
 		else
